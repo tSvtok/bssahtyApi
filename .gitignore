@@ -1,0 +1,37 @@
+# --- Docker & OS ---
+.env
+.env.local
+.env.*.local
+docker-compose.override.yml
+.DS_Store
+Thumbs.db
+
+# --- Laravel Core ---
+src/vendor/
+src/node_modules/
+src/public/storage
+src/public/hot
+src/storage/*.key
+src/.env
+src/.env.backup
+src/.env.production
+src/auth.json
+
+# --- Laravel Testing & Logs ---
+src/.phpunit.result.cache
+src/storage/logs/*.log
+src/storage/framework/cache/data/*
+src/storage/framework/sessions/*
+src/storage/framework/testing/*
+src/storage/framework/views/*.php
+
+# --- IDE Config ---
+.idea/
+.vscode/
+*.swp
+*.bak
+*.tmp
+
+# --- Backend Specific ---
+src/bootstrap/cache/*.php
+!src/bootstrap/cache/.gitignore
