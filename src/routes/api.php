@@ -9,15 +9,11 @@ use App\Http\Controllers\Api\SpotController;
 use App\Http\Controllers\Api\SportCategoryController;
 use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\Api\ResponseController;
-use Illuminate\Support\Facades\Hash;
 
 // Public API routes
 Route::prefix('auth')->group(function () {
     Route::post('register', [AuthController::class, 'register']);
     Route::post('login', [AuthController::class, 'login']);
-});
-Route::get('/test', function () {
-    return response()->json(['password' => Hash::make('password')]);
 });
 
 Route::get('sport-categories', [SportCategoryController::class, 'index']);
